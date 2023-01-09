@@ -1,0 +1,41 @@
+@import "./colors";
+
+//default design for buttons
+
+:root {
+  --primary: $accent-orange;
+}
+
+.btn {
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  border: 1px solid var(--primary);
+}
+
+.btn--outline {
+  padding: 8pc 20px;
+  border: 1pc solid var(--outline);
+  transition: all 0, 3s ease-out;
+}
+
+.btn--medium {
+  padding: 8px 20px;
+  font-size: 20px;
+}
+
+.btn--large {
+  padding: 12px 26px;
+  font-size: 20px;
+}
+
+.btn--medium:hover,
+.btn--large:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em $accent-orange;
+  transform: translateY(-0.25em);
+}

@@ -1,0 +1,170 @@
+@import "./colors";
+
+//default scss for footer
+
+.footer-container {
+  background-color: $primary;
+  padding: -1rem 0 1rem 0;
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.footer-links {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: right;
+  padding-left: 50px;
+}
+
+.footer-link-wrapper {
+  display: flex;
+}
+
+.push {
+  margin-left: auto;
+}
+
+.footer-link-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 26px;
+  padding-top: 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.footer-link-items s2 {
+  line-height: 27px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.footer-link-items > s2,
+h5,
+p1 {
+  color: $neutral-white;
+}
+
+.footer-link-items > p1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 7px;
+}
+
+.footer-link-items .boxed s2 {
+  color: $primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  left: 15px;
+  top: 3px;
+}
+
+.footer-link-items > h5 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  margin-bottom: 3px;
+}
+
+.footer-link-items a {
+  color: $neutral-white;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.footer-link-items a:hover {
+  color: $neutral-light-gray;
+  transition: 0.3s ease-out;
+}
+
+.footer-email-form h2 {
+  margin-bottom: 32px;
+}
+
+/* Social Icons */
+.social-icon-link {
+  color: $neutral-white;
+  font-size: 24px;
+}
+
+.social-media {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.social-media-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+}
+
+.social-logo {
+  color: $neutral-white;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-self: center;
+  margin-bottom: 16px;
+}
+
+.website-rights {
+  color: $neutral-white;
+  margin-bottom: 16px;
+}
+
+.boxed {
+  background-color: $neutral-white;
+  border-radius: 8px;
+  height: 32px;
+  width: 364.72px;
+}
+
+.boxed-logo {
+  display: flex;
+  background-color: $neutral-white;
+  border-radius: 8px;
+  width: 70px;
+  height: 55px;
+}
+
+.footer-link-items img {
+  position: relative;
+  align-self: center;
+  bottom: 15px;
+  height: 55px;
+  width: 45px;
+}
+
+//mobile view (responsiveness)
+
+@media (max-width: 1024px) {
+  .boxed {
+    width: auto;
+  }
+
+  .footer-link-items .boxed s2 {
+    display: none;
+  }
+}

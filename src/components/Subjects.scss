@@ -1,0 +1,149 @@
+@import "./colors";
+@import "./Cards.scss";
+
+//scss design for the 'Subjects' component
+
+.subjects > h3,
+.tracks > h3 {
+  margin: 9rem auto -2rem;
+}
+
+h6 {
+  font-size: 22px;
+  color: $neutral-black;
+  font-weight: 500;
+  line-height: 158%;
+  text-align: center;
+}
+
+.cards__container {
+  flex-flow: row;
+  align-items: center;
+  width: 800px;
+  height: 650.16px;
+  margin: 0 auto;
+}
+
+.subjects .cards__item__link {
+  width: 374px;
+  min-height: 450px;
+  resize: none;
+  border-radius: 5%;
+}
+
+.subjects .cards__item__info {
+  background-color: $neutral-light-gray;
+  padding-top: 0px;
+  margin-top: -10px;
+}
+
+.subjects .cards__item__pic-wrap::after {
+  color: $primary;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+}
+
+.subjects-btns {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+
+  padding: 10px;
+  gap: 10px;
+
+  width: 146px;
+  height: 150px;
+  margin-left: 580px;
+  margin-bottom: -80px;
+}
+
+.subjects .cards__item__info > h5 {
+  color: $primary;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.subjects .cards__item__text {
+  color: $neutral-black;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: -10px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 150%;
+  position: absolute;
+  padding: auto;
+  max-height: 30%;
+}
+
+.subjects .tracks-btns .btn {
+  right: 10px;
+  bottom: 15px;
+}
+
+//default for button
+.subjects-btns .btn {
+  margin: 6px;
+  margin-left: 15px;
+  margin-bottom: 40px;
+  height: 40%;
+  width: 100%;
+  background: $accent-purple;
+  border-radius: 10px;
+  color: $neutral-white;
+}
+
+//pops out and adds shadow when hovered
+.subjects-btns .btn:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em $neutral-gray;
+  transform: translateY(-0.25em);
+}
+
+//changes color when selected
+.subjects-btns .btn:focus {
+  background: $accent-orange;
+}
+
+//mobile view or responsiveness check
+@media screen and (max-width: 1200px) {
+  .subjects .cards__item__text {
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .subjects .cards__item__link {
+    width: 375px;
+    height: 425px;
+    resize: none;
+    border-radius: 5%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cards__container {
+    height: 100%;
+    width: 249px;
+    margin-right: 406px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .subjects-btns {
+    margin-left: 45%;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .subjects-btns {
+    margin-left: 40%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h3 {
+    margin-left: 30px;
+  }
+}

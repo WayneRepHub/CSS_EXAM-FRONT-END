@@ -1,0 +1,201 @@
+@import "./colors";
+
+//title scss at the start of section
+h3 {
+  text-align: center;
+  color: $primary;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 158px;
+  text-align: center;
+}
+
+//default design for the cards shown within components
+.cards {
+  padding: 0.5rem;
+  padding-bottom: 10.5rem;
+  background: $neutral-white;
+}
+
+.cards__item__info > h5 {
+  text-align: center;
+  color: $neutral-black;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.cards__container {
+  flex-flow: row;
+  align-items: center;
+  width: 600px;
+  height: 220.16px;
+  margin: 0 auto;
+  margin-bottom: -550px;
+}
+
+.cards__wrapper {
+  position: relative;
+  padding: 50px;
+  margin: 5px -250px 150px;
+}
+
+.cards__items {
+  margin-bottom: 4px;
+}
+
+.cards__item {
+  display: flex;
+  flex: 1;
+  margin: 0 1rem;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.cards__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 374px;
+  border-radius: 5%;
+  text-decoration: none;
+  min-height: 450px;
+  resize: none;
+
+  .tracks-btns {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    width: 146px;
+    height: 150px;
+    margin-left: 100px;
+    top: 350px;
+  }
+}
+
+.cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+}
+
+.fade-img {
+  animation-name: fade-img;
+  animation-duration: 2s;
+}
+
+.cards__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 30;
+  padding: 16px 70px;
+  max-width: 281px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 150%;
+  color: $neutral-black;
+  text-align: center;
+}
+
+.cards__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+  border-radius: 5%;
+  z-index: 1;
+}
+
+.cards__item__img:hover {
+  transform: scale(1.05);
+}
+
+.cards__item__info {
+  padding: 10px;
+  min-height: 220px;
+  border-radius: 5%;
+  position: relative;
+}
+
+.cards__item__text {
+  color: $neutral-gray;
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  /*truncates paragraph after 5 lines, 
+  otherwise tries to fit text into 5 lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.tracks-btns .btn {
+  margin: 6px;
+  background: $accent-purple;
+  border-radius: 10px;
+  color: $neutral-white;
+  position: absolute;
+  bottom: -20px;
+  left: 35%;
+}
+
+//mobile view (responsiveness)
+@media only screen and (min-width: 1200px) {
+  .content__blog__container {
+    width: 84%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cards__items {
+    display: flex;
+  }
+
+  .cards__container {
+    width: 0px;
+    margin-bottom: 20px;
+  }
+
+  .cards__item__pic-wrap::after {
+    padding: 16px 100px;
+  }
+
+  .cards__item__text {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tracks-btns .btn {
+    left: 25%;
+    bottom: -50px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cards__item__link {
+    width: 40%;
+    margin-left: 300px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h3 {
+    margin-left: 240px;
+  }
+}

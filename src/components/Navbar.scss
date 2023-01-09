@@ -1,0 +1,181 @@
+@import "./colors";
+
+//default design for navigation bar
+.navbar {
+  background: $neutral-white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  max-width: 1500px;
+}
+
+.navbar-logo img {
+  height: 80px;
+  width: 70px;
+}
+
+.navbar-logo {
+  color: $primary;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-item {
+  height: 130px;
+}
+
+.nav-links {
+  color: $primary;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  border-bottom: 2px solid $primary;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: $neutral-black;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+//mobile view or responsiveness check
+@media screen and (max-width: 960px) and (max-width: 899px) {
+  .navbar-logo img {
+    height: 80px;
+    width: 70px;
+    position: relative;
+    bottom: 35px;
+  }
+
+  .NavbarItems {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    height: 70vh;
+    position: fixed;
+    top: 80px;
+    left: 100%;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: $primary;
+    left: 50%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    color: $neutral-white;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: $neutral-white;
+    color: $primary;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: $primary;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 1rem auto;
+    border-radius: 4px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: $neutral-black;
+    padding: 14px 20px;
+    border: 1px solid $neutral-black;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover {
+    background: $neutral-white;
+    color: $neutral-white;
+    transition: 250ms;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .nav-menu.active {
+    left: 38%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .nav-menu.active {
+    left: 2%;
+  }
+}
